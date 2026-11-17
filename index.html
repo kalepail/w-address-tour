@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>W addresses on Stellar · a live tour</title>
+    <meta
+      name="description"
+      content="Make a smart wallet on the Stellar testnet, give it three W addresses, and get paid into each one. A one-minute live tour of muxed contract addresses (CAP-84) in Bell, Protocol 30, with the trade-offs."
+    />
+    <link rel="canonical" href="https://muxed-c.stellar.buzz/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)" />
+
+    <!-- Share cards: Open Graph (Slack, Discord, LinkedIn, iMessage, Telegram) and X. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="W addresses on Stellar" />
+    <meta property="og:url" content="https://muxed-c.stellar.buzz/" />
+    <meta property="og:title" content="One smart wallet. A new address for every reason you get paid." />
+    <meta
+      property="og:description"
+      content="A one-minute live tour of W addresses on the real Stellar testnet. One wallet, three addresses, four payments, and the trade-offs. No wallet needed."
+    />
+    <meta property="og:image" content="https://muxed-c.stellar.buzz/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="W addresses on Stellar: one smart wallet address fans out into three W addresses named Rent, Freelance, and Gifts. Only the end of each address changes."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="One smart wallet. A new address for every reason you get paid." />
+    <meta name="twitter:description" content="A one-minute live tour of W addresses on the real Stellar testnet. No wallet needed." />
+    <meta name="twitter:image" content="https://muxed-c.stellar.buzz/og.png" />
+    <meta
+      name="twitter:image:alt"
+      content="W addresses on Stellar: one smart wallet address fans out into three W addresses named Rent, Freelance, and Gifts. Only the end of each address changes."
+    />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400..650&family=Geist+Mono:wght@400..600&display=swap"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#step">Skip to the tour</a>
+    <header class="top">
+      <div class="top-inner">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2.75" y="5.75" width="18.5" height="14.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <path d="M6.5 10.5l1.6 5 1.9-4 1.9 4 1.6-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16 10.5h2.5M16 13h2.5M16 15.5h2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+          <span>W addresses on Stellar</span>
+          <span class="pill" title="Everything in this tour runs on the Stellar test network. Test XLM has no value.">Testnet</span>
+        </div>
+        <p class="progress-label" id="progress-label" aria-live="polite"></p>
+      </div>
+      <ol class="progress" id="progress" aria-hidden="true"></ol>
+    </header>
+
+    <main class="layout">
+      <article class="step" id="step" tabindex="-1" aria-live="polite"></article>
+      <aside class="ledger" id="ledger" aria-label="Your wallet on testnet"></aside>
+    </main>
+
+    <nav class="controls" aria-label="Tour controls">
+      <div class="controls-inner">
+        <button type="button" class="btn-text" id="back">Back</button>
+        <p class="controls-hint" id="hint" aria-live="polite"></p>
+        <button type="button" class="btn-primary" id="next">Start the tour</button>
+      </div>
+    </nav>
+
+    <noscript><p class="noscript">This tour needs JavaScript. It makes keys and sends test transactions from your browser.</p></noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

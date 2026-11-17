@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OG card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..650&family=Geist+Mono:wght@400..600&display=block" />
+<style>
+  /* Rendered at 1200x630 (scale 2) by scripts/og/render.sh into public/og.png.
+     Same frame as the post-quantum tour card, so the two read as a series. */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #11110f;
+    color: #ecebe4;
+    font-family: 'Geist', sans-serif;
+    font-feature-settings: 'ss01', 'ss02';
+    -webkit-font-smoothing: antialiased;
+    padding: 56px 72px 52px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  body::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgb(236 235 228 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(236 235 228 / 0.035) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: -1px -1px;
+    pointer-events: none;
+  }
+  .top { display: flex; align-items: center; gap: 14px; position: relative; }
+  .mark { width: 34px; height: 34px; }
+  .brand { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+  .pill {
+    font-family: 'Geist Mono', monospace; font-size: 15px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 6px;
+    background: rgb(236 235 228 / 0.08); color: rgb(236 235 228 / 0.75);
+  }
+  .main { flex: 1; display: flex; align-items: center; gap: 48px; position: relative; padding: 24px 0 28px; }
+  .copy { flex: 0 0 540px; }
+  .eyebrow {
+    font-family: 'Geist Mono', monospace; font-size: 18px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase; color: #fdda24;
+  }
+  h1 { margin-top: 18px; font-size: 56px; line-height: 1.06; letter-spacing: -0.035em; font-weight: 600; text-wrap: balance; }
+  .sub { margin-top: 22px; font-size: 24px; line-height: 1.4; color: rgb(236 235 228 / 0.72); max-width: 30ch; text-wrap: pretty; }
+
+  .wallet {
+    flex: 1;
+    background: #1a1a17;
+    border: 1px solid rgb(236 235 228 / 0.1);
+    border-radius: 16px;
+    padding: 24px 24px 10px;
+  }
+  .w-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .w-label { font-family: 'Geist Mono', monospace; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(236 235 228 / 0.6); }
+  .w-c { font-family: 'Geist Mono', monospace; font-size: 15px; color: rgb(236 235 228 / 0.75); }
+  .total { margin-top: 10px; font-size: 54px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+  .total small { font-size: 20px; font-weight: 500; color: rgb(236 235 228 / 0.7); letter-spacing: 0; margin-left: 4px; }
+  .share { display: flex; gap: 3px; height: 9px; margin-top: 18px; border-radius: 5px; overflow: hidden; }
+  .share i { display: block; }
+  .rows { margin-top: 14px; }
+  .row { display: grid; grid-template-columns: 12px 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid rgb(236 235 228 / 0.1); }
+  .chip { width: 12px; height: 12px; border-radius: 3px; }
+  .name { font-size: 20px; font-weight: 500; }
+  .addr { font-family: 'Geist Mono', monospace; font-size: 14px; color: rgb(236 235 228 / 0.45); margin-top: 3px; letter-spacing: -0.01em; }
+  .addr b { color: #11110f; background: #fdda24; font-weight: 600; border-radius: 3px; padding: 0 3px; }
+  .amt { font-size: 20px; font-variant-numeric: tabular-nums; }
+  .t0 { background: #e2825e; } .t1 { background: #4fb3a5; } .t2 { background: #9a90e6; }
+
+  .foot { display: flex; justify-content: space-between; align-items: baseline; position: relative; font-size: 19px; color: rgb(236 235 228 / 0.62); }
+  .foot b { color: #ecebe4; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2.75" y="5.75" width="18.5" height="14.5" rx="3" fill="none" stroke="#ecebe4" stroke-width="1.6" />
+      <path d="M6.5 10.5l1.6 5 1.9-4 1.9 4 1.6-5" fill="none" stroke="#ecebe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16 10.5h2.5M16 13h2.5M16 15.5h2.5" stroke="#ecebe4" stroke-width="1.6" stroke-linecap="round" />
+    </svg>
+    <span class="brand">W addresses on Stellar</span>
+    <span class="pill">Live on testnet</span>
+  </div>
+  <div class="main">
+    <div class="copy">
+      <p class="eyebrow">Bell · Protocol 30 · CAP-84</p>
+      <h1>One smart wallet. A new address for every reason you get paid.</h1>
+      <p class="sub">A one-minute live tour. No wallet needed.</p>
+    </div>
+    <div class="wallet">
+      <div class="w-head"><span class="w-label">Your smart wallet</span><span class="w-c">CALQ3…NMR5OL</span></div>
+      <p class="total">190<small>XLM</small></p>
+      <div class="share"><i class="t0" style="flex:120"></i><i class="t1" style="flex:45"></i><i class="t2" style="flex:25"></i></div>
+      <div class="rows">
+        <div class="row"><span class="chip t0"></span><div><p class="name">Rent</p><p class="addr">WALQ3…53NMQAAAAAAAAAAAA<b>FHQ4</b></p></div><span class="amt">120</span></div>
+        <div class="row"><span class="chip t1"></span><div><p class="name">Freelance</p><p class="addr">WALQ3…53NMQAAAAAAAAAAAA<b>IWD4</b></p></div><span class="amt">45</span></div>
+        <div class="row"><span class="chip t2"></span><div><p class="name">Gifts</p><p class="addr">WALQ3…53NMQAAAAAAAAAAAA<b>MGS4</b></p></div><span class="amt">25</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span><b>muxed-c.stellar.buzz</b></span><span>Real testnet transactions, in your browser</span></div>
+</body>
+</html>

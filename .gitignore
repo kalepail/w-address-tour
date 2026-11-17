@@ -1,0 +1,11 @@
+.cf/
+.cloudflare/
+.design/
+.DS_Store
+.wrangler/
+*.log
+contract/target/
+contract/test_snapshots/
+dist/
+node_modules/
+renders/
